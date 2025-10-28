@@ -1,71 +1,9 @@
-body {
-  font-family: 'Open Sans Condensed', sans-serif;
-  background-color: #fafafa;
-  color: #333;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-}
-
-/* Header and Footer (Flexbox) */
-header, footer {
-  background-color: #2a2a9e;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-}
-
-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* === Typography === */
 h1, h2 {
-  color: #2a2a9e;
-  font-family: 'Sonsie One', cursive;
-  margin-top: 1.2em;
+  color: blue;
 }
 
 p {
-  color: #555;
-  margin-bottom: 1em;
-}
-
-h1, strong {
-  color: purple;
-}
-
-em {
   color: gray;
-}
-
-/* === Layout: Grid === */
-main {
-  display: grid;
-  grid-template-columns: 2fr 1fr; /* main content + sidebar */
-  gap: 2rem;
-  padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  background: white;
-  border-radius: 10px;
-}
-
-/* Sidebar Styling */
-aside {
-  background: #f0f4ff;
-  border-left: 4px solid #2a2a9e;
-  padding: 1rem;
-  border-radius: 8px;
-}
-
-/* === Lists === */
-ul, ol {
-  padding: 10px 20px;
-  border-radius: 6px;
-  margin-bottom: 1em;
 }
 
 ul {
@@ -76,66 +14,18 @@ ol {
   border: 4px solid rgb(21, 128, 0);
 }
 
-/* Definition list with Flexbox */
-dl {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+ol, ul {
+  padding: 5px 20px;
+  border-radius: 4px;
 }
 
-dt {
-  font-weight: bold;
-  color: #2a2a9e;
+h1, strong {
+  color: purple;
 }
 
-dd {
-  margin: 0 0 10px 20px;
+em {
+  color: gray;
 }
-
-/* === Responsive Images (if added later) === */
-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 6px;
-}
-
-/* === Media Queries === */
-
-/* Below 900px: stack columns */
-@media (max-width: 900px) {
-  main {
-    grid-template-columns: 1fr;
-  }
-
-  aside {
-    border-left: none;
-    border-top: 3px solid #2a2a9e;
-  }
-
-  h1 {
-    text-align: center;
-  }
-}
-
-/* Below 640px: increase font size, simplify layout */
-@media (max-width: 640px) {
-  body {
-    font-size: 110%;
-    padding: 0.5rem;
-  }
-
-  main {
-    padding: 1rem;
-  }
-
-  h1, h2 {
-    text-align: center;
-  }
-
-  p {
-    line-height: 1.7;
-  }
-
   ul, ol {
     padding: 15px;
   }
