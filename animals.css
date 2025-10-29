@@ -1,5 +1,5 @@
 body {
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: oswald;
   background-color: #fafafa;
   color: #333;
   margin: 0;
@@ -7,7 +7,7 @@ body {
   line-height: 1.6;
 }
 
-/* Header and Footer (Flexbox) */
+
 header, footer {
   background-color: #2a2a9e;
   color: white;
@@ -21,30 +21,35 @@ footer {
   align-items: center;
 }
 
-/* === Typography === */
+
 h1, h2 {
   color: #2a2a9e;
-  font-family: 'Sonsie One', cursive;
+  font-family: lobster two;
   margin-top: 1.2em;
 }
 
 p {
-  color: #555;
+  color: #131212;
+  margin-bottom: 1em;
+}
+
+f {
+  color: #ee250a;
   margin-bottom: 1em;
 }
 
 h1, strong {
-  color: purple;
+  color: rgb(243, 134, 9);
 }
 
 em {
   color: gray;
 }
 
-/* === Layout: Grid === */
+
 main {
   display: grid;
-  grid-template-columns: 2fr 1fr; /* main content + sidebar */
+  grid-template-columns: 2fr 1fr; 
   gap: 2rem;
   padding: 2rem;
   max-width: 1200px;
@@ -53,7 +58,7 @@ main {
   border-radius: 10px;
 }
 
-/* Sidebar Styling */
+
 aside {
   background: #f0f4ff;
   border-left: 4px solid #2a2a9e;
@@ -61,7 +66,7 @@ aside {
   border-radius: 8px;
 }
 
-/* === Lists === */
+
 ul, ol {
   padding: 10px 20px;
   border-radius: 6px;
@@ -76,7 +81,7 @@ ol {
   border: 4px solid rgb(21, 128, 0);
 }
 
-/* Definition list with Flexbox */
+
 dl {
   display: flex;
   flex-direction: column;
@@ -92,16 +97,16 @@ dd {
   margin: 0 0 10px 20px;
 }
 
-/* === Responsive Images (if added later) === */
+
 img {
   max-width: 100%;
   height: auto;
   border-radius: 6px;
 }
 
-/* === Media Queries === */
 
-/* Below 900px: stack columns */
+
+
 @media (max-width: 900px) {
   main {
     grid-template-columns: 1fr;
@@ -117,7 +122,7 @@ img {
   }
 }
 
-/* Below 640px: increase font size, simplify layout */
+
 @media (max-width: 640px) {
   body {
     font-size: 110%;
