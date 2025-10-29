@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Resposive and accessible</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Animal Encyclopedia</title>
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Lobster+Two|Oswald"
-        rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&family=Oswald&display=swap" rel="stylesheet">
 
-
-  <link rel="stylesheet" href="animals.css">
+  <!-- CSS -->
+  <link href="animals.css" rel="stylesheet">
 
   <!-- HTML5 Shiv for old IE browsers -->
   <!--[if lt IE 9]>
@@ -18,9 +19,20 @@
 </head>
 
 <body>
+<div class="container">
+
   <header>
-    <h1>Animal page</h1>
+    <h1>Animal Page</h1>
   </header>
+
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Mammals</a></li>
+      <li><a href="#">Reptiles</a></li>
+      <li><a href="#">More Facts</a></li>
+    </ul>
+  </nav>
 
   <main>
     <section>
@@ -28,16 +40,10 @@
       <p>This is the first paragraph in our page. It introduces our animals.</p>
 
       <h2>The Llama</h2>
-      <p>
-        Our Llama is a big fan of list items. When she spies a patch of them on a web
-        page, she will eat them like sweets, licking her lips as she goes.
-      </p>
+      <p>Our Llama is a big fan of list items. When she spies a patch of them on a web page, she will eat them like sweets, licking her lips as she goes.</p>
 
       <h2>The Anaconda</h2>
-      <p>
-        The crafty anaconda likes to slither around the page, traveling rapidly by way
-        of anchors to sneak up on his prey.
-      </p>
+      <p>The crafty anaconda likes to slither around the page, traveling rapidly by way of anchors to sneak up on his prey.</p>
 
       <hr>
 
@@ -66,33 +72,35 @@
 
       <dl>
         <dt>Llama</dt>
-        <dd>
-          Tall, woolly quadruped, pointy ears. Sometimes rideable, but grumpy and
-          spits a lot. Big fan of list items.
-        </dd>
+        <dd>Tall, woolly quadruped, pointy ears. Sometimes rideable, but grumpy and spits a lot. Big fan of list items.</dd>
 
         <dt>Anaconda</dt>
-        <dd>
-          A very large constrictor snake; travels rapidly by way of anchors to sneak
-          up on his prey.
-        </dd>
+        <dd>A very large constrictor snake; travels rapidly by way of anchors to sneak up on his prey.</dd>
 
         <dt>Hippopotamus</dt>
         <dd>His description is bottomless.</dd>
       </dl>
     </section>
-
-
-    <aside>
-      <h2>Fun Animal Facts</h2>
-      <p>Did you know llamas hum to communicate? </p>
-      <p>Anacondas can hold their breath for up to 10 minutes! </p>
-      <p>Hippos can run up to 19 mph! </p>
-    </aside>
   </main>
 
+  <aside id="aside1">
+    <h2>Fun Animal Facts</h2>
+    <p>Did you know llamas hum to communicate?</p>
+    <p>Anacondas can hold their breath for up to 10 minutes!</p>
+    <p>Hippos can run up to 19 mph!</p>
+  </aside>
+
+  <aside id="aside2">
+    <h2>More Animal Facts</h2>
+    <p>Llamas have three stomach compartments!</p>
+    <p>Anacondas give birth to live young.</p>
+    <p>Hippos spend up to 16 hours a day in water.</p>
+  </aside>
+
   <footer>
-    <f> 2025 Animal Facts | For everyone</f>
+    <small>© 2025 Animal Facts | Designed for Everyone</small>
   </footer>
+
+</div> <!-- end container -->
 </body>
 </html>
