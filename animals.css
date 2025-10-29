@@ -1,99 +1,142 @@
+body {
+  font-family: 'Open Sans Condensed', sans-serif;
+  background-color: #fafafa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Text Markup Assignment</title>
+/* Header and Footer (Flexbox) */
+header, footer {
+  background-color: #2a2a9e;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One"
-        rel="stylesheet" type="text/css">
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+/* === Typography === */
+h1, h2 {
+  color: #2a2a9e;
+  font-family: 'Sonsie One', cursive;
+  margin-top: 1.2em;
+}
 
-  <link rel="stylesheet" href="animals.css">
+p {
+  color: #555;
+  margin-bottom: 1em;
+}
 
-  <!-- HTML5 Shiv for old IE browsers -->
-  <!--[if lt IE 9]>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-  <![endif]-->
-</head>
+h1, strong {
+  color: purple;
+}
 
-<body>
-  <header>
-    <h1>Animal page</h1>
-  </header>
+em {
+  color: gray;
+}
 
-  <main>
-    <section>
-      <h1>Basic HTML Animals</h1>
-      <p>This is the first paragraph in our page. It introduces our animals.</p>
+/* === Layout: Grid === */
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* main content + sidebar */
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 10px;
+}
 
-      <h2>The Llama</h2>
-      <p>
-        Our Llama is a big fan of list items. When she spies a patch of them on a web
-        page, she will eat them like sweets, licking her lips as she goes.
-      </p>
+/* Sidebar Styling */
+aside {
+  background: #f0f4ff;
+  border-left: 4px solid #2a2a9e;
+  padding: 1rem;
+  border-radius: 8px;
+}
 
-      <h2>The Anaconda</h2>
-      <p>
-        The crafty anaconda likes to slither around the page, traveling rapidly by way
-        of anchors to sneak up on his prey.
-      </p>
+/* === Lists === */
+ul, ol {
+  padding: 10px 20px;
+  border-radius: 6px;
+  margin-bottom: 1em;
+}
 
-      <hr>
+ul {
+  border: 2px solid red;
+}
 
-      <h1>Looking at Lists</h1>
-      <p>Turn the following list of my favorite vegetables into an unordered list.</p>
+ol {
+  border: 4px solid rgb(21, 128, 0);
+}
 
-      <ul>
-        <li>Cucumber</li>
-        <li>Broccoli</li>
-        <li>Asparagus</li>
-        <li>Pepper</li>
-      </ul>
+/* Definition list with Flexbox */
+dl {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
-      <p>Turn the following directions into an ordered list.</p>
+dt {
+  font-weight: bold;
+  color: #2a2a9e;
+}
 
-      <ol>
-        <li>First knock on the door</li>
-        <li>When prompted, say the magic word</li>
-        <li>Wait for at least 5 seconds</li>
-        <li>Turn the handle and push</li>
-      </ol>
+dd {
+  margin: 0 0 10px 20px;
+}
 
-      <hr>
+/* === Responsive Images (if added later) === */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
 
-      <h1>Advanced HTML Animals</h1>
+/* === Media Queries === */
 
-      <dl>
-        <dt>Llama</dt>
-        <dd>
-          Tall, woolly quadruped, pointy ears. Sometimes rideable, but grumpy and
-          spits a lot. Big fan of list items.
-        </dd>
+/* Below 900px: stack columns */
+@media (max-width: 900px) {
+  main {
+    grid-template-columns: 1fr;
+  }
 
-        <dt>Anaconda</dt>
-        <dd>
-          A very large constrictor snake; travels rapidly by way of anchors to sneak
-          up on his prey.
-        </dd>
+  aside {
+    border-left: none;
+    border-top: 3px solid #2a2a9e;
+  }
 
-        <dt>Hippopotamus</dt>
-        <dd>His description is bottomless.</dd>
-      </dl>
-    </section>
+  h1 {
+    text-align: center;
+  }
+}
 
-    <!-- SIDEBAR -->
-    <aside>
-      <h2>Fun Animal Facts</h2>
-      <p>Did you know llamas hum to communicate? 🦙</p>
-      <p>Anacondas can hold their breath for up to 10 minutes! 🐍</p>
-      <p>Hippos can run up to 19 mph! 🦛</p>
-    </aside>
-  </main>
+/* Below 640px: increase font size, simplify layout */
+@media (max-width: 640px) {
+  body {
+    font-size: 110%;
+    padding: 0.5rem;
+  }
 
-  <footer>
-    <p>&copy; 2025 Animal Facts | All Rights Reserved</p>
-  </footer>
-</body>
-</html>
+  main {
+    padding: 1rem;
+  }
+
+  h1, h2 {
+    text-align: center;
+  }
+
+  p {
+    line-height: 1.7;
+  }
+
+  ul, ol {
+    padding: 15px;
+  }
+}
