@@ -1,72 +1,78 @@
 body {
-  font-family: oswald;
-  background-color: #fafafa;
+  background: #fafafa;
+  font-size: 16px;
+  font-family: 'Oswald', sans-serif;
   color: #333;
   margin: 0;
   padding: 0;
   line-height: 1.6;
 }
 
-
-header, footer {
-  background-color: #2a2a9e;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-}
-
-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
 h1, h2 {
+  font-family: 'Lobster Two', cursive;
   color: #2a2a9e;
-  font-family: lobster two;
   margin-top: 1.2em;
 }
 
 p {
-  color: #131212;
+  color: #111;
   margin-bottom: 1em;
 }
 
-f {
-  color: #ee250a;
-  margin-bottom: 1em;
+header, nav, main, aside, footer {
+  padding: 1.5em;
+  border: 1px solid black;
 }
 
-h1, strong {
-  color: rgb(243, 134, 9);
+header, footer {
+  text-align: center;
+  background: #2a2a9e;
+  color: white;
 }
 
-em {
-  color: gray;
+footer small {
+  display: block;
+  padding: 0.5em;
 }
 
-
-main {
-  display: grid;
-  grid-template-columns: 2fr 1fr; 
-  gap: 2rem;
-  padding: 2rem;
+.container {
   max-width: 1200px;
   margin: 0 auto;
-  background: white;
-  border-radius: 10px;
+  display: grid;
+  width: 100vw;
+  min-height: 100vh;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas:
+    "heady heady heady"
+    "navvy navvy navvy"
+    "aside1 mainy aside2"
+    "aside1 mainy aside2"
+    "footy footy footy";
 }
 
+/* Assign grid areas */
+header { grid-area: heady; background: #4c4cff; }
+nav { grid-area: navvy; background: #e9ecff; }
+main { grid-area: mainy; background: #ffffff; }
+#aside1 { grid-area: aside1; background: #f0f4ff; }
+#aside2 { grid-area: aside2; background: #f5f0ff; }
+footer { grid-area: footy; background: #2a2a9e; color: white; }
 
-aside {
-  background: #f0f4ff;
-  border-left: 4px solid #2a2a9e;
-  padding: 1rem;
-  border-radius: 8px;
+/* Nav styling */
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
 }
 
+nav ul li a {
+  text-decoration: none;
+  color: #2a2a9e;
+  font-weight: bold;
+}
 
+/* Lists */
 ul, ol {
   padding: 10px 20px;
   border-radius: 6px;
@@ -81,67 +87,45 @@ ol {
   border: 4px solid rgb(21, 128, 0);
 }
 
-
-dl {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+/* Responsive layouts */
+@media screen and (min-width: 641px) and (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "heady heady"
+      "navvy navvy"
+      "mainy mainy"
+      "aside1 aside2"
+      "footy footy";
+  }
 }
 
-dt {
-  font-weight: bold;
-  color: #2a2a9e;
-}
-
-dd {
-  margin: 0 0 10px 20px;
-}
-
-
-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 6px;
-}
-
-
-
-
-@media (max-width: 900px) {
-  main {
+@media screen and (max-width: 640px) {
+  .container {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "heady"
+      "mainy"
+      "aside1"
+      "aside2"
+      "navvy"
+      "footy";
   }
 
-  aside {
-    border-left: none;
-    border-top: 3px solid #2a2a9e;
-  }
-
-  h1 {
+  nav ul {
+    flex-direction: column;
     text-align: center;
   }
-}
 
-
-@media (max-width: 640px) {
-  body {
-    font-size: 110%;
-    padding: 0.5rem;
-  }
-
-  main {
-    padding: 1rem;
+  nav ul li a {
+    display: block;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #2a2a9e;
+    background: white;
   }
 
   h1, h2 {
     text-align: center;
-  }
-
-  p {
-    line-height: 1.7;
-  }
-
-  ul, ol {
-    padding: 15px;
   }
 }
